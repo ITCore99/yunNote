@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <script src="//unpkg.com/wangeditor/release/wangEditor.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+    <button id="btn">获得内容</button>
+    <div id="content"></div>
+    <script>
+      var E = window.wangEditor
+      var editor = new E('#div1')
+      editor.create();
+      let btn=document.getElementById("btn");
+      btn.onclick=function()
+      {
+        let content=editor.txt.html();
+        console.log(content);
+      }
+    </script>
+</body>
+</html>
